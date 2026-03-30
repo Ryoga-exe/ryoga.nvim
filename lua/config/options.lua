@@ -40,6 +40,7 @@ opt.tabclose = "uselast"
 opt.wrap = false
 opt.linebreak = true
 opt.breakindent = true
+vim.opt.showbreak = '↪'
 
 -- Search
 opt.hlsearch = true
