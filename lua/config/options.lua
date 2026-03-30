@@ -1,88 +1,79 @@
 local opt = vim.opt
 
--- encoding
+-- Encoding
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 
--- line numbers
+-- UI / Appearance
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.signcolumn = "yes"
 
--- tab & indentation
+opt.title = true
+opt.showcmd = true
+opt.showmode = false
+opt.cmdheight = 0
+opt.laststatus = 3
+opt.showtabline = 2
+
+opt.termguicolors = true
+opt.fillchars = { eob = " " }
+
+opt.scrolloff = 10
+
+-- Tab / Indentation
 opt.tabstop = 4
 opt.shiftwidth = 0
 opt.smarttab = true
 opt.expandtab = true
+
 opt.autoindent = true
 opt.smartindent = true
-opt.tabclose = "uselast"
 opt.copyindent = true
 opt.preserveindent = true
 opt.shiftround = true
 
+opt.tabclose = "uselast"
 
--- line wrapping
-opt.breakindent = true
-opt.linebreak = true
+-- Wrapping
 opt.wrap = false
+opt.linebreak = true
+opt.breakindent = true
 
--- search settings
+-- Search
 opt.hlsearch = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.infercase = true
 
--- appearance
-opt.title = true
-opt.scrolloff = 10
-opt.showcmd = true
-opt.cmdheight = 0
-opt.laststatus = 3
-opt.showtabline = 2
-opt.showmode = false
-opt.termguicolors = true
-opt.background = 'dark'
-opt.fillchars = { eob = " " }
-
--- backspace
+-- Editing / Behavior
 opt.backspace = { "indent", "eol", "start", "nostop" }
-
--- split windows
-opt.splitright = true
-opt.splitbelow = true
-
-opt.backup = false
-opt.wildignore:append { '*/node_modules/*' }
-opt.iskeyword:append('-')
-opt.formatoptions:append { 'r' }
-opt.completeopt = { "menu", "menuone", "noselect" }
-opt.pumheight = 10
-
-opt.shortmess = vim.tbl_deep_extend("force", vim.opt.shortmess:get(), {
-  s = true, I = true, c = true, C = true
-})
-
-opt.splitbelow = true
-opt.splitright = true
-
-opt.jumpoptions = {}
-
-opt.diffopt = vim.list_extend(vim.opt.diffopt:get(), {
-  "algorithm:histogram",
-  "linematch:60"
-})
-
 opt.clipboard = "unnamedplus"
 opt.mouse = "a"
-opt.termguicolors = true
-
 opt.confirm = true
-opt.undofile = true
+opt.virtualedit = "block"
+
+opt.backup = false
 opt.writebackup = false
+opt.undofile = true
+opt.swapfile = false
 
 opt.timeoutlen = 500
 opt.updatetime = 300
 
-opt.virtualedit = "block"
+-- Window
+opt.splitright = true
+opt.splitbelow = true
+opt.jumpoptions = {}
+
+-- Completion / Popup Menu
+opt.completeopt = { "menu", "menuone", "noselect" }
+opt.pumheight = 10
+
+-- Other
+opt.wildignore:append({ "*/node_modules/*" })
+opt.iskeyword:append("-")
+opt.formatoptions:append("r")
+opt.shortmess:append("sIcC")
+opt.diffopt:append({ "algorithm:histogram", "linematch:60" })
