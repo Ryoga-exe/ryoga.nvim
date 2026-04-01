@@ -40,7 +40,7 @@ opt.tabclose = "uselast"
 opt.wrap = false
 opt.linebreak = true
 opt.breakindent = true
-opt.showbreak = '↪'
+opt.showbreak = "↪"
 
 -- Search
 opt.hlsearch = true
