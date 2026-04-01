@@ -23,7 +23,7 @@ opt.fillchars = { eob = " " }
 opt.scrolloff = 10
 
 -- Tab / Indentation
-opt.tabstop = 4
+opt.tabstop = 2
 opt.shiftwidth = 0
 opt.smarttab = true
 opt.expandtab = true
@@ -40,7 +40,7 @@ opt.tabclose = "uselast"
 opt.wrap = false
 opt.linebreak = true
 opt.breakindent = true
-vim.opt.showbreak = '↪'
+opt.showbreak = '↪'
 
 -- Search
 opt.hlsearch = true
